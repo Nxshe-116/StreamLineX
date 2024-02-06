@@ -1,0 +1,56 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center" style="
+  background-image: url('assets/images/bg.jpg');
+background-repeat: no-repeat;
+background-size: cover;">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col md="8">
+        <c-card-group>
+          <c-card class="p-4">
+            <c-card-body>
+              <form  cForm (submit)="login()" >
+                <h1>StreamLineX Admin Portal</h1>
+                <p class="text-medium-emphasis">Sign In using your domain credentials</p>
+                <c-input-group class="mb-3">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input mat-input autoComplete="username" cFormControl placeholder="Email" [ngModelOptions]="{standalone: true}"   [(ngModel)]="username" />
+                </c-input-group>
+                <c-input-group class="mb-4">
+                  <span cInputGroupText>
+                    <svg cIcon name="cilLockLocked"></svg>
+                  </span>
+                  <input
+                    [(ngModel)]="password"
+                    [ngModelOptions]="{standalone: true}"
+                    autoComplete="current-password"
+                    cFormControl
+                    placeholder="Password"
+                    type="password"
+
+                  />
+                </c-input-group>
+                <c-row>
+                  <c-col xs="10"ß>
+                    <button cButton class="px-4" color="info" (click)="login()">
+                      <span style="color: white"> Login</span>
+                    </button>
+                  </c-col>
+                </c-row>
+              </form>
+            </c-card-body>
+          </c-card>
+          <c-card [ngStyle]="{'width.%': 44}" class="text-white bg-light py-5">
+            <c-card-body class="text-center">
+              <div>
+                <img src="assets/images/ig.png" alt="Credit card" style="width: 100%; height: auto;">
+              </div>
+            </c-card-body>
+          </c-card>
+
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
